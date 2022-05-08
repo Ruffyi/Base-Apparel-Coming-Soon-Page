@@ -45,13 +45,25 @@
 						type="email"
 						class="newsletter__input"
 						placeholder="Email Address"
+						aria-label="Email"
+						data-email
 					/>
-					<button class="btn newsletter__btn">
-						<img src="./assets/images/icon-arrow.svg" alt="" />
+					<img
+						src="./assets/images/icon-error.svg"
+						alt="Error"
+						class="newsletter__error"
+					/>
+					<button class="btn newsletter__btn" data-submit>
+						<img
+							src="./assets/images/icon-arrow.svg"
+							alt=""
+							aria-hidden="true"
+						/>
 					</button>
 				</div>
 			</section>
 			<section class="background"></section>
 		</main>
+		<script src="./script/app.js"></script>
 	</body>
 </html>
