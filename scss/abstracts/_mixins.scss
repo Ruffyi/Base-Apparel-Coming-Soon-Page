@@ -1,0 +1,34 @@
+@mixin flex-mother(
+	$flexDirection: row,
+	$alignItems: center,
+	$justifyContent: center
+) {
+	display: flex;
+	flex-direction: $flexDirection;
+	align-items: $alignItems;
+	justify-content: $justifyContent;
+}
+
+@mixin mediaQuery($media) {
+	@media (max-width: $media) {
+		@content;
+	}
+}
+
+@mixin positioning($position: absolute, $top: 0, $left: 0, $invert: false) {
+	position: $position;
+	@if ($invert) {
+		bottom: $top;
+		right: $left;
+	} @else {
+		top: $top;
+		left: $left;
+	}
+}
+
+@mixin background($url: '') {
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

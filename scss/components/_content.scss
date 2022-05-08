@@ -1,0 +1,23 @@
+.content {
+	position: relative;
+	height: 100vh;
+	padding: 4rem 8rem;
+	background-image: url('./../../assets/images/bg-pattern-desktop.svg');
+	background-size: cover;
+	@include mediaQuery(map-get($breakpoints-map, '960')) {
+		padding: 4rem;
+	}
+	@include mediaQuery(map-get($breakpoints-map, '760')) {
+		padding: 4rem 2rem;
+	}
+	@include mediaQuery(map-get($breakpoints-map, '570')) {
+		padding: 0;
+	}
+	&__logo {
+		@include mediaQuery(map-get($breakpoints-map, '570')) {
+			height: 10rem;
+			padding-left: 2rem;
+			@include flex-mother(row, center, flex-start);
+		}
+	}
+}

@@ -1,0 +1,34 @@
+.heading__primary {
+	margin: 10rem 0 2rem;
+	font-size: 6.8rem;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: var(--clr-primary-desaturated-red);
+	font-weight: 300;
+	@include mediaQuery(map-get($breakpoints-map, '570')) {
+		margin: 6rem 0 2rem;
+		text-align: center;
+	}
+	&--bottom {
+		display: block;
+		margin: 1rem 0;
+		color: var(--clr-neutral-dark-grayish-red);
+		font-weight: 600;
+		@include mediaQuery(map-get($breakpoints-map, '570')) {
+			margin: 0;
+		}
+	}
+}
+
+.paragraph {
+	color: var(--clr-primary-desaturated-red);
+	font-weight: 600;
+	font-size: 1.5rem;
+	width: 80%;
+	line-height: 1.7;
+	@include mediaQuery(map-get($breakpoints-map, '570')) {
+		margin: 0 auto;
+		width: 90%;
+		text-align: center;
+	}
+}

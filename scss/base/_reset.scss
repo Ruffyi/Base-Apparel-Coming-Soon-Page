@@ -15,4 +15,8 @@
 html {
 	box-sizing: border-box;
 	font-family: 'Josefin Sans', sans-serif;
+	font-size: map-get($fs-map, 'primary');
+	@include mediaQuery(map-get($breakpoints-map, '760')) {
+		font-size: map-get($fs-map, 'secondary');
+	}
 }

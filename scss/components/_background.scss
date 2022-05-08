@@ -1,0 +1,16 @@
+.background {
+	@include background('./../../assets/images/hero-desktop.jpg');
+	width: 80%;
+	height: 100vh;
+	@include mediaQuery(map-get($breakpoints-map, '570')) {
+		display: none;
+	}
+	&--mobile {
+		display: none;
+		@include mediaQuery(map-get($breakpoints-map, '570')) {
+			display: block;
+		}
+		@include background('./../../assets/images/hero-mobile.jpg');
+		height: 30%;
+	}
+}
