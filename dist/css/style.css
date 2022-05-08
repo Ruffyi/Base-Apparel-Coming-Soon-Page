@@ -1,5 +1,24 @@
-body {
-  background-color: red;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --clr-primary-desaturated-red: hsl(0deg, 36%, 70%);
+  --clr-primary-soft-red: hsl(0deg, 93%, 68%);
+  --clr-neutral-dark-grayish-red: hsl(0deg, 6%, 24%);
+  --clr-gradient-primary-first: hsl(0deg, 0%, 100%);
+  --clr-gradient-primary-second: hsl(0deg, 100%, 98%);
+  --clr-gradient-second-first: hsl(0deg, 80%, 86%);
+  --clr-gradient-second-second: hsl(0deg, 74%, 74%);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
