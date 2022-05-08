@@ -69,7 +69,7 @@ html {
 }
 
 .u-active {
-  display: block;
+  display: block !important;
 }
 
 .main {

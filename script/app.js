@@ -1,16 +1,17 @@
 const emailInput = document.querySelector('[data-email]');
 const submitBtn = document.querySelector('[data-submit]');
+const error = document.querySelector('[data-error]');
 
 const isEmailValid = email => {
 	return email.toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) === null;
 };
 
-const successTemplate = validEmail => {
-	console.log('address');
+const successTemplate = () => {
+	error.classList.remove('u-active');
 };
 
 const errorTemplate = () => {
-	console.log('error');
+	error.classList.add('u-active');
 };
 
 const sendEmail = () => {
@@ -20,7 +21,12 @@ const sendEmail = () => {
 
 	const validEmail = isEmailValid(emailAddressInput);
 
-	!validEmail ? successTemplate(emailAddressInput) : errorTemplate();
+	!validEmail ? successTemplate() : errorTemplate();
 };
 
 submitBtn.addEventListener('click', sendEmail);
+submitBtn.addEventListener('keydown', e => {
+	if (e.key === 'Enter' || e.key === '') {
+		sendEmail();
+	}
+});
